@@ -1,18 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: beluga.serverprint
-Bundle-SymbolicName: beluga.serverprint;singleton:=true
+Bundle-SymbolicName: de.schoenbeck.serverprint;singleton:=true
 Bundle-Version: 10.0.0.qualifier
 Service-Component: OSGI-INF/*.xml
-Require-Bundle: org.adempiere.base;bundle-version="5.1.0",
- org.adempiere.ui.zk;bundle-version="5.1.0",
- org.adempiere.plugin.utils;bundle-version="5.1.0",
- org.adempiere.base.process;bundle-version="5.1.0",
+Require-Bundle: org.adempiere.base,
+ org.adempiere.ui.zk,
+ org.adempiere.plugin.utils,
+ org.adempiere.base.process,
  org.idempiere.webservices,
  zk,
- org.adempiere.report.jasper;bundle-version="5.1.0",
- net.sf.jasperreports.engine;bundle-version="6.3.1",
- com.sun.activation.jakarta.activation;bundle-version="1.2.1"
+ org.adempiere.report.jasper,
+ net.sf.jasperreports.engine,
+ com.sun.activation.jakarta.activation
 Import-Package: org.apache.commons.codec;version="1.9.0",
  org.apache.commons.codec.binary;version="1.9.0",
  org.jfree.io
@@ -24,3 +24,5 @@ Bundle-ClassPath: .,
  lib/jspi.jar,
  lib/jcommon-1.0.23.jar
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
+Export-Package: de.schoenbeck.model,
+ de.schoenbeck.serverprint
